@@ -19,4 +19,5 @@ Struktur:
 5. Gunakan merge no fast forward.
    
 ## Penjelasan Alur Pengerjaan Penugasan 1 GIT Level 1 [Sesuai dengan Tugas]
-1. 
+1. Penyelesaian Tugas 1
+
