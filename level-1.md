@@ -28,3 +28,8 @@ Pertama-tama, hal yang saya lakukan adalah membuat sebuah repository pada github
 Setelah melakukan hal tersebut, saya membuat sebuah folder yang memiliki _file structure_ sesuai dengan yang diinstruksikan. Kemudian, saya melakukan inisiasi git pada folder tersebut menggunakan command `git init`. Setelah itu, saya melakukan command `git add .` yang berguna untuk memasukkan semua perubahan file kedalam staging area. Setelah memasukkan ke dalam staging area, saya melakukan command `git commit -am <commit-message>` yang berfungsi untuk mencommit hal hal yang berada pada staging area. Dapat dilihat pada gambar berikut.
 
 ![2](./src/img/2.png)
+
+### 2. Implementasi Fitur Branching pada GIT
+Untuk tugas yang kedua ini, ditugaskan untuk membuat 3 branch baru yang bernama `development`, `featureA`, dan `featureB`. Disini saya menggunakan piping command untuk membuat banyak branch dalam satu kali command. Berikut adalah command tersebut. `git branch development | git branch featureA | git branch featureB`. Kemudian saya menggunakan command `git branch --list` untuk menampilkan semua branch yang ada. Dapat dilihat pada gambar berikut. 
+
+![3](./src/img/3.png)
