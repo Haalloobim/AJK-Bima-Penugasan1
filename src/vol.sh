@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$2" ]; then
-    echo "need second argument"
+    echo "Error Message: Command need second argument"
     exit 1
 fi
 
