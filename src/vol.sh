@@ -15,4 +15,9 @@ plugin="$2"
 
 python3 vol/vol.py -f "$filename" windows."$plugin" > "$plugin"
 
+if [ $? -ne 0 ]; then
+    echo "Error Message: vol.py command failed"
+    exit 1
+fi
+
 echo "Output saved to $plugin file..."
