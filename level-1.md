@@ -101,3 +101,12 @@ Setelah itu saya melakukan langkah langkah yang sama untuk proses `merge-conflic
 ![22](./src/img/22.png)
 
 ![23](./src/img/23.png)
+
+### 5. Implementasi Command Merge No Fast Forward Pada GIT
+Untuk melakukan command `merge no fast forward`. Saya melakukan 2 commit terlebih dahulu pada branch `featureB` kemudian juga melakukan push ke remote. Dapat dilihat pada gambar berikut.
+
+![24](./src/img/24.png)
+
+Setelah itu saya melakukan `checkout` menggunakan command `git merge --no-ff featureB` untuk melakukan merge no fast forward dan melakukan push. Dapa dilihat pada gambar dibawah ini bahwa branch akan langsung bergabung ke branch `development`.
+
+![25](./src/img/25.png)
