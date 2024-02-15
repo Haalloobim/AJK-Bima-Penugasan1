@@ -34,7 +34,7 @@ Untuk tugas yang kedua ini, ditugaskan untuk membuat 3 branch baru yang bernama 
 
 ![3](./src/img/3.png)
 
-## 3. Implementasi Command-Command Pada GIT
+### 3. Implementasi Command-Command Pada GIT
 Setelah saya membuat branch sesuai yang telah diinstruksikan, saya menghubungkan git local saya dengan git remote yaitu dengan Github. disini saya menggunakan command `git remote add <remote-name> <github-repo-link>` dilanjutkan dengan command `git branch -M <branch-name>` untuk menamai branch nya menjadi master dilanjutkan lagi menggunakan command `git push -u <remote-name> <branch-name>` command ini berfungsi untuk 'mendorong' content yang ada pada git local untuk berada pada remote repository sehingga content yang awalnya hanya ada pada local akan berada pada remote repository juga. Dapat dilihat pada gambar berikut. 
 
 ![5](./src/img/5.png)
@@ -70,3 +70,34 @@ Setelah itu saya akan mengimplementasikan command `git reset` yang berfungsi unt
 Ketika saya melakukan perubahan pada sebuah branch dan langsung ingin berpindah ke branch lain pasti akan timbul sebuah error. Hal ini dapat diselesaikan dengan command `git stash` yang berfungsi untuk menyimpan perubahan pada suatu branch. Sehingga ketika melakukan `git checkout` tidak terjadi error. 
 
 ![14](./src/img/14.png)
+
+### 4. Implementasi Conflict Handling Pada GIT
+Pada tugas 4, diinstruksikan untuk membuat sebuah kasus dimana pada saat merging akan terjadi kondisi conflict. Kondisi conflict ini akan terjadi ketika, user telah melakukan perubahan pada branch yang berbeda akan tetapi perubahan tersebut trajadi pada file dan line yang sama sehingga akan bertabrakan. Oleh karena itu untuk membuat kondisi conflict saya akan merubah file dan line yang sama pada branch `featureA` dan `featureB`. Berikut ini kondisi semula dari branch `featureA` dan `featureB`.
+
+![15](./src/img/15.png)
+
+Kemudian saya melakukan `checkout` ke branch `featureA` dan melakukan perubahan, lalu saya commit. Hal ini juga saya lakukan pada branch `featureB`, lakukan perubahan pada file kemudian melakukan commit pada branch tersebut. Dapat dipastikan bahwa perubahan dari branch `featureA` harus berbeda dengan branch `development` dan perubahan pada branch `featureB` juga harus berbeda dengan branch `featureA`, karena yang nanti akan saya lakukan adalah `checkout develepment -> merge featureA -> merge featureB`. Dapat dilihat dari dua gambar berikut. 
+
+![16](./src/img/16.png)
+
+![17](./src/img/17.png)
+
+Setelah melakukan hal tersebut, saya melakukan `git checkout develepment` kemudiian melakukan merging yang pertama dengan branch `featureA` dengan command `git merge featureA`. ketika melakukan command ini, conflict akan terjadi. Terdapat button `Resolve in merge editor` lalu tekan button tersebut. Dapat dilihat pada gambar dibawah. 
+
+![18](./src/img/18.png)
+
+Kemudian kita diharuskan untuk menentukan content mana yang akan dipilih sebagai content final. Setelah menentukan hal tersebut, saya menekan button `Complete merge`. untuk menyelesaikan proses merging. Dapat dilihat pada gambar dibawah ini. 
+
+![19](./src/img/19.png)
+
+Setelah itu hal terakhir yang dilakukan untuk proses merging pada branch `featureA` adalah melakuakn commit pada perubahan yang terjadi. Dapat dilihat pada gambar berikut. 
+
+![20](./src/img/20.png)
+
+Setelah itu saya melakukan langkah langkah yang sama untuk proses `merge-conflict handling` seperti sebelumnya. Dapat dilihat pada gambar gambar berikut. 
+
+![21](./src/img/21.png)
+
+![22](./src/img/22.png)
+
+![23](./src/img/23.png)
