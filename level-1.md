@@ -33,3 +33,40 @@ Setelah melakukan hal tersebut, saya membuat sebuah folder yang memiliki _file s
 Untuk tugas yang kedua ini, ditugaskan untuk membuat 3 branch baru yang bernama `development`, `featureA`, dan `featureB`. Disini saya menggunakan piping command untuk membuat banyak branch dalam satu kali command. Berikut adalah command tersebut. `git branch development | git branch featureA | git branch featureB`. Kemudian saya menggunakan command `git branch --list` untuk menampilkan semua branch yang ada. Dapat dilihat pada gambar berikut. 
 
 ![3](./src/img/3.png)
+
+## 3. Implementasi Command-Command Pada GIT
+Setelah saya membuat branch sesuai yang telah diinstruksikan, saya menghubungkan git local saya dengan git remote yaitu dengan Github. disini saya menggunakan command `git remote add <remote-name> <github-repo-link>` dilanjutkan dengan command `git branch -M <branch-name>` untuk menamai branch nya menjadi master dilanjutkan lagi menggunakan command `git push -u <remote-name> <branch-name>` command ini berfungsi untuk 'mendorong' content yang ada pada git local untuk berada pada remote repository sehingga content yang awalnya hanya ada pada local akan berada pada remote repository juga. Dapat dilihat pada gambar berikut. 
+
+![5](./src/img/5.png)
+
+Setelah melakukan fitur `git push`, disini saya akan mengimplementasikan fitur `git pull`. Karena command `git pull` berfungsi sebaliknya dari `git push` yaitu 'menarik' content dari remote repository ke dalam local repository, saya berencana untuk merubah content dari remote terlebih dahulu kemudian baru melakukan `git pull`. Dapat dilihat pada gambar berikut. 
+
+![6](./src/img/6.png)
+
+Setelah melakukan commit pada remote repository, saya menggunakan command `git status` pada local repository saya untuk mengetahui bagaimana kondisi local repository tersebut. Dapat dilihat status bertuliskan `your branch is behind 'origin' by 1 commit`. Untuk itu saya menggunakan command `git pull` untuk menyamakan commit antara local dan remote. Dapat dilihat pada gambar berikut. 
+
+![7](./src/img/7.png)
+
+Setelah itu untuk memvisualisasikan branching, saya melakukan commit pada master kemudian berpindah ke branch lain menggunakan command `git checkout <branch-name>` setelah melakukan hal tersebut, saya melakukan commit  pada branch dev. Dapat dilihat pada gambar branch mulai terbentuk dikarenakan terdapat perbedaan commit pada branch dev dengan branch master. 
+
+![8](./src/img/8.png)
+
+Kemudian saya akan mengimplementasikan command `git merge <target-branch>` yang berfungsi untuk menggabungkan dua branch yang ada. Dapat dilihat pada gambar berikut. 
+
+![10](./src/img/10.png)
+
+Kemudian disini saya berencana untuk membuat branch yang ada pada local bisa dilihat pada remote juga. Disini saya menggunakan command sebelumnya yaitu `git push` dengan sedikit modifikasi untuk membuat local branch saya dapat dilihat/diakses pada remote repository. dengan command sebagai berikut: `git push <remote-name> <local-branch>:<remote:branch>` dengan catatan apabila remote branch belum ada maka github akan otomatis membuatkannya. Hal ini saya lakukan pada semua branch. Dapat dilihat pada gambar berikut. 
+
+![11](./src/img/11.png)
+
+Setelah itu saya akan mengimplementasikan command `git diff <branch-name>` yang berfungsi untuk menampilkan hal apa saja yang berubah dibandingkan dengan branch lain. Disini saya berada pada branch `development` dan ingin melihat perbedaan dengan branch `master`. Dapat dilihat dari gambar berikut.
+
+![12](./src/img/12.png)
+
+Setelah itu saya akan mengimplementasikan command `git reset` yang berfungsi untuk mengembalikan ke kondisi commit sebelumnya. Disini saya menggunakan command `git reset --hard HEAD~` untuk benar benar mengembalikan commit sebelumnya. Kasusnya dapat dilihat pada gambar berikut.  
+
+![13](./src/img/13.png)
+
+Ketika saya melakukan perubahan pada sebuah branch dan langsung ingin berpindah ke branch lain pasti akan timbul sebuah error. Hal ini dapat diselesaikan dengan command `git stash` yang berfungsi untuk menyimpan perubahan pada suatu branch. Sehingga ketika melakukan `git checkout` tidak terjadi error. 
+
+![14](./src/img/14.png)
