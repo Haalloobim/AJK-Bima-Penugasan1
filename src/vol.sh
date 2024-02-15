@@ -22,3 +22,4 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Output saved to $plugin file..."
+echo "--COMMAND EXECUTED--"
