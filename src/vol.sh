@@ -5,9 +5,14 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+if [ -z "$2" ]; then
+    echo "need second argument"
+    exit 1
+fi
+
 filename="$1"
 plugin="$2"
 
 python3 vol/vol.py -f "$filename" windows."$plugin" > "$plugin"
 
- echo "Output saved to $plugin file..."
+echo "Output saved to $plugin file..."
