@@ -110,3 +110,12 @@ Untuk melakukan command `merge no fast forward`. Saya melakukan 2 commit terlebi
 Setelah itu saya melakukan `checkout` menggunakan command `git merge --no-ff featureB` untuk melakukan merge no fast forward dan melakukan push. Dapa dilihat pada gambar dibawah ini bahwa branch akan langsung bergabung ke branch `development`.
 
 ![25](./src/img/25.png)
+
+## Kondisi GIT Graph Pada Level 1
+
+![26](./src/img/26.png)
+
+## Kesulitan Pada Pengerjaan Level 1
+
+- Tugas ini merupakan perkenalan saya terhadap fitur branching pada github. Oleh karena itu, sempat kebingungan bagaimana mengelolah branch pada GIT, muncul banyak sekali pertanyaan seperti `kenapa tidak bercabang ketika melakukan commit?` dll. Setelah melakukan banyak eksperimen, akhirnya bisa membiasakan diri pada penggunaan branching. 
+- Melakukan inisiasi ulang pada GIT. Hal ini terjadi karena hal yang saya sebutkan sebelumnya. Setelah melakukan beberapa commit masih saja belum bercabang dan karena hal ini juga sayang mengubah nama local repo saya. 
